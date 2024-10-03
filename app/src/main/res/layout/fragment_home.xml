@@ -6,9 +6,275 @@
     tools:context=".HomeFragment"
     android:background="@color/green">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".HomeFragment"
+        android:background="@color/green"
+        android:padding="16dp">
+
+        <!-- TextView (Title or Heading) -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Search Bar -->
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search here..."
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:layout_marginStart="5dp"/>
+
+        <!-- Horizontal Scroll View with Cards -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Card 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <!-- Card Content -->
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:padding="16dp"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/card_title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Card 1"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- TextView Below the Card -->
+                    <TextView
+                        android:id="@+id/text_below_card_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text below Card 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- Card 2 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <!-- Card Content -->
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:padding="16dp"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/card_title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Card 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- TextView Below the Card -->
+                    <TextView
+                        android:id="@+id/text_below_card_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text below Card 2"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <!-- Card Content -->
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:padding="16dp"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/card_title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Card 1"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- TextView Below the Card -->
+                    <TextView
+                        android:id="@+id/text_below_card_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text below Card 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <!-- Card Content -->
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:padding="16dp"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/card_title4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Card 1"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- TextView Below the Card -->
+                    <TextView
+                        android:id="@+id/text_below_card_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text below Card 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- Add more cards here similarly... -->
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Vertical Scroll View with Items -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Item 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:id="@+id/item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:id="@+id/item2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 2"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:id="@+id/item3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 3"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Add more items as needed -->
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
 </FrameLayout>
