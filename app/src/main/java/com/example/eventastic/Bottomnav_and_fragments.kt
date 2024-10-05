@@ -17,29 +17,28 @@ class Bottomnav_and_fragments : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityBottomnavAndFragmentsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replace(HomeFragment())
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            when (it.itemId) {
+        /* binding.bottomNavigationView.setOnItemSelectedListener {
+             when (it.itemId) {
 
-                R.id.home -> replace(HomeFragment())
-                R.id.profile -> replace(ProfileFragment())
-                R.id.explore -> replace(exploreFragment())
-                R.id.maps -> replace(MapsFragment())
+                 R.id.home -> replace(HomeFragment())
+                 R.id.profile -> replace(ProfileFragment())
+                 R.id.explore -> replace(exploreFragment())
+                 R.id.maps -> replace(MapsFragment())
 
-                else -> {
-                }
+                 else -> {
+                 }
 
-            }
-            true
-        }
+             }
+             true
+         }*/
 
     }
-    fun replace(fragment: Fragment) {
+    /*   fun replace(fragment: Fragment) {
 
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
-        fragmentTransaction.commit()
-    }
+           val fragmentManager = supportFragmentManager
+           val fragmentTransaction = fragmentManager.beginTransaction()
+           fragmentTransaction.replace(R.id.frame_layout, fragment)
+           fragmentTransaction.commit()
+       }*/
 }

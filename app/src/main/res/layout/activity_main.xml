@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/getStartedbutton"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"

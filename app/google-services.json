@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "982381695487",
+    "project_id": "eventstatic-47c75",
+    "storage_bucket": "eventstatic-47c75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982381695487:android:6a208e58ffa02ba05797ca",
+        "android_client_info": {
+          "package_name": "com.example.eventastic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT6sRs0rXFToggnat1buxhOWvY1OwYnIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,31 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-    android:background="@color/green">
+    tools:context=".fragments.HomeFragment"
+    >
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".HomeFragment"
-        android:background="@color/green"
+        tools:context=".fragments.HomeFragment"
+        android:layout_marginTop="100dp"
+        android:background="@color/white"
         android:padding="16dp">
 
         <!-- TextView (Title or Heading) -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:src="@drawable/profile" />
+
+            <Button
+                android:id="@+id/usernametxtbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="Hello Jake"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical" /> <!-- Align text vertically -->
+
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/textViewTitle"
+            android:id="@+id/textViewTitle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
+            android:text="Explore the Unforgetable Experiences!"
             android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="left"
             android:textColor="@android:color/black"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"/>
 
         <!-- Search Bar -->
         <SearchView
@@ -34,11 +62,25 @@
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false"
             android:queryHint="Search here..."
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="0dp"
             android:background="@android:color/white"
             android:elevation="4dp"
             android:padding="8dp"
             android:layout_marginStart="5dp"/>
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Events"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/black"
+            android:layout_gravity="left"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            />
 
         <!-- Horizontal Scroll View with Cards -->
         <HorizontalScrollView
@@ -55,6 +97,7 @@
 
                 <!-- Card 1 -->
                 <LinearLayout
+                    android:id="@+id/card_hippie_market"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -62,28 +105,32 @@
 
                     <!-- Card Content -->
                     <LinearLayout
+
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
-                        android:background="@android:color/white"
-                        android:padding="16dp"
+                        android:background="@drawable/round"
                         android:elevation="4dp">
 
-                        <TextView
-                            android:id="@+id/card_title1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Card 1"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/hipiemarket"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle"/>
+
+
+
                     </LinearLayout>
 
                     <!-- TextView Below the Card -->
-                    <TextView
+                    <Button
                         android:id="@+id/text_below_card_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Text below Card 1"
+                        android:text="Hippie Market"
+                        android:textStyle="bold"
+                        android:background="@color/white"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
@@ -100,27 +147,29 @@
                     <!-- Card Content -->
                     <LinearLayout
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
-                        android:background="@android:color/white"
-                        android:padding="16dp"
+                        android:background="@drawable/round"
                         android:elevation="4dp">
 
-                        <TextView
-                            android:id="@+id/card_title2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Card 2"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/surf"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle"/>
+
+
                     </LinearLayout>
 
                     <!-- TextView Below the Card -->
-                    <TextView
+                    <Button
                         android:id="@+id/text_below_card_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Text below Card 2"
+                        android:text="Surf Fiesta"
+                        android:textStyle="bold"
+                        android:background="@color/white"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
@@ -136,29 +185,31 @@
                     <!-- Card Content -->
                     <LinearLayout
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
-                        android:background="@android:color/white"
-                        android:padding="16dp"
+                        android:background="@drawable/round"
                         android:elevation="4dp">
 
-                        <TextView
-                            android:id="@+id/card_title3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Card 1"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/can"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle"/>
+
+
                     </LinearLayout>
 
                     <!-- TextView Below the Card -->
-                    <TextView
+                    <Button
                         android:id="@+id/text_below_card_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Text below Card 1"
+                        android:text="Cannoying"
+                        android:background="@color/white"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
+                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:gravity="center" />
                 </LinearLayout>
@@ -171,29 +222,31 @@
                     <!-- Card Content -->
                     <LinearLayout
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
-                        android:background="@android:color/white"
-                        android:padding="16dp"
+                        android:background="@drawable/round"
                         android:elevation="4dp">
 
-                        <TextView
-                            android:id="@+id/card_title4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Card 1"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp" />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kayak"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle"/>
+
+
                     </LinearLayout>
 
                     <!-- TextView Below the Card -->
-                    <TextView
+                    <Button
                         android:id="@+id/text_below_card_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Text below Card 1"
+                        android:text="kayaking"
+                        android:background="@color/white"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
+                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:gravity="center" />
                 </LinearLayout>
@@ -203,11 +256,22 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Events"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_gravity="left"
+            android:layout_marginBottom="5dp" />
+
         <!-- Vertical Scroll View with Items -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp">
+            android:layout_marginTop="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -219,54 +283,138 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="12dp"
-                    android:background="@android:color/white"
+                    android:background="@drawable/round"
                     android:layout_marginBottom="8dp"
                     android:elevation="2dp">
 
-                    <TextView
-                        android:id="@+id/item1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Item 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/para"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle" />
+
+                        <TextView
+                            android:id="@+id/item1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="20dp"
+                            android:text="Para jumping"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:text="Join"
+                            android:background="@drawable/green_btn_backgound"
+                            />
+
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="12dp"
-                    android:background="@android:color/white"
+                    android:background="@drawable/round"
                     android:layout_marginBottom="8dp"
                     android:elevation="2dp">
 
-                    <TextView
-                        android:id="@+id/item2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Item 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rope"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle" />
+
+                        <TextView
+                            android:id="@+id/item2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="20dp"
+                            android:text="Rope Jumping"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/button4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:background="@drawable/green_btn_backgound"
+                            android:text="Join" />
+
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="12dp"
-                    android:background="@android:color/white"
+                    android:background="@drawable/round"
                     android:layout_marginBottom="8dp"
                     android:elevation="2dp">
 
-                    <TextView
-                        android:id="@+id/item3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Item 3"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/hipiemarket"
+                            app:shapeAppearanceOverlay="@style/CustomImageViewStyle" />
+
+                        <TextView
+                            android:id="@+id/item3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="20dp"
+                            android:text="Hippie Market"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:background="@drawable/green_btn_backgound"
+                            android:text="Join" />
+
+
+                    </LinearLayout>
+
+
+
                 </LinearLayout>
 
                 <!-- Add more items as needed -->
@@ -277,4 +425,4 @@
     </LinearLayout>
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

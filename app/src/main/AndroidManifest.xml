@@ -13,24 +13,49 @@
         android:theme="@style/Theme.Eventastic"
         tools:targetApi="31">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".booking_successfull"
+            android:exported="false" />
+        <activity
+            android:name=".card_details"
+            android:exported="false" />
+        <activity
+            android:name=".acc_succsess_msg"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false"/>
+        <activity
+            android:name=".success_massage"
+            android:exported="false" />
+        <activity
+            android:name=".create_account"
+            android:exported="false" />
+        <activity
+            android:name=".paymethod"
+            android:exported="false" />
+        <activity
+            android:name=".booking"
+            android:exported="false" />
+        <activity
             android:name=".Bottomnav_and_fragments"
+            android:exported="false" />
+        <activity
+            android:name=".Login_screen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".Login_screen"
-            android:exported="false">
-        </activity>
-
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="false">
         </activity>
     </application>
 

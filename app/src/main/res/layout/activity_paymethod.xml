@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/main"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!-- Back Icon -->
+
+    <!-- Title -->
+
+    <!-- Hippie Market Image -->
+
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Back"
+        android:src="@drawable/arrow_back_24dp_e8eaed_fill0_wght400_grad0_opsz24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_confirm_and_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Confirm and payment"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mastercard_option"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edittext_bcgrnd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm_and_payment">
+
+        <!-- Mastercard Image -->
+        <ImageView
+            android:id="@+id/iv_mastercard_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/masterxard"
+            android:scaleType="centerCrop"/>
+        <!-- Replace with your Mastercard image -->
+
+
+        <!-- Mastercard Text -->
+        <TextView
+            android:id="@+id/tv_mastercard_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Credit card/debit"
+            android:textSize="16sp" />
+
+        <!-- Radio Button -->
+        <RadioButton
+            android:id="@+id/rb_mastercard"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <!-- Visa Option -->
+    <LinearLayout
+        android:id="@+id/visa_option"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edittext_bcgrnd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mastercard_option">
+
+        <!-- Visa Image -->
+        <ImageView
+            android:id="@+id/iv_visa_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/visa"
+            android:scaleType="centerCrop"/>
+
+        <!-- Visa Text -->
+        <TextView
+            android:id="@+id/tv_visa_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="Credit card/debit"
+            android:textSize="16sp" />
+
+        <!-- Radio Button -->
+        <RadioButton
+            android:id="@+id/rb_visa"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <!-- Process Payment Button -->
+    <Button
+        android:id="@+id/btn_process_payment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/green_btn_backgound"
+        android:text="Process Payment"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
